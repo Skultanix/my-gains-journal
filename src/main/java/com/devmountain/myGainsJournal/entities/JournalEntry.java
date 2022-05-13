@@ -1,5 +1,6 @@
 package com.devmountain.myGainsJournal.entities;
 
+import com.devmountain.myGainsJournal.dtos.JournalEntryDto;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -54,4 +55,22 @@ public class JournalEntry {
 
     @Column
     private float time;
+
+    public JournalEntry(JournalEntryDto journalEntryDto) {
+        if (journalEntryDto.getExerciseType() != null) {
+            this.exerciseType = journalEntryDto.getExerciseType();
+        }
+        if (journalEntryDto.getExerciseName() != null) {
+            this.exerciseName = journalEntryDto.getExerciseName();
+        }
+        this.weight = journalEntryDto.getWeight();
+        this.setCount = journalEntryDto.getSetCount();
+        this.setOne = journalEntryDto.getSetOne();
+        this.setTwo = journalEntryDto.getSetTwo();
+        this.setThree = journalEntryDto.getSetThree();
+        this.setFour = journalEntryDto.getSetFour();
+        this.setFive = journalEntryDto.getSetFive();
+        this.distance = journalEntryDto.getDistance();
+        this.time = journalEntryDto.getTime();
+    }
 }

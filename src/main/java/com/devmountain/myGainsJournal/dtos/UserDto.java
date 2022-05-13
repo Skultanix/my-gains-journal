@@ -1,6 +1,5 @@
 package com.devmountain.myGainsJournal.dtos;
 
-
 import com.devmountain.myGainsJournal.entities.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,6 +12,7 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class UserDto implements Serializable {
     private Long id;
     private String username;

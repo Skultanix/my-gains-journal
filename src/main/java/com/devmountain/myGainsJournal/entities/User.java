@@ -1,5 +1,6 @@
 package com.devmountain.myGainsJournal.entities;
 
+import com.devmountain.myGainsJournal.dtos.UserDto;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -28,4 +29,13 @@ public class User {
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JsonManagedReference
     private Set<JournalEntry> journalEntrySet = new HashSet<>();
+
+    public User(UserDto userDto) {
+        if (userDto.getUsername() != null) {
+            this.username = userDto.getUsername();
+        }
+        if (userDto.getPassword() != null) {
+            this.password = userDto.getPassword();
+        }
+    }
 }
