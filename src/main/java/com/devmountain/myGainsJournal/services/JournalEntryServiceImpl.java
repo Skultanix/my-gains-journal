@@ -27,7 +27,7 @@ public class JournalEntryServiceImpl implements JournalEntryService {
         Optional<User> userOptional = userRepository.findById(userId);
         JournalEntry journalEntry = new JournalEntry(journalEntryDto);
         userOptional.ifPresent(journalEntry::setUser);
-        journalEntryRepository.saveAllAndFlush(journalEntry);
+        journalEntryRepository.save(journalEntry);
     }
 
     @Override
