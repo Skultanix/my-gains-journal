@@ -19,7 +19,7 @@ public class JournalEntryController {
         return journalEntryService.getAllEntriesByUserId(userId);
     }
 
-    @PostMapping("/user/{userId}}")
+    @PostMapping("/user/{userId}")
     public void addEntry(@RequestBody JournalEntryDto journalEntryDto, @PathVariable Long userId) {
         journalEntryService.addEntry(journalEntryDto, userId);
     }
