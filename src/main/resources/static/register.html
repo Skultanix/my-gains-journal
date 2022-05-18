@@ -5,9 +5,27 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/Styles.css" type="text/css">
     <title>MyGains Register</title>
 </head>
 <body>
-
+<div class="logreg-container">
+    <h1>Register</h1>
+    <form id="login-form">
+        <div class="form-group">
+            <label for="login-username">Username</label>
+            <input type="text" class="form-control" id="login-username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" class="form-control" id="login-password" placeholder="Password">
+        </div>
+        <div class="submission">
+            <button id="submit-button" type="submit" class="btn btn-primary">Submit</button>
+            <a href="./login.html" class="btn btn-secondary">Go to Login</a>
+        </div>
+    </form>
+</div>
+<script src="./javascript/register.js" type="application/javascript"></script>
 </body>
 </html>

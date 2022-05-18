@@ -5,9 +5,235 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/Styles.css" type="text/css">
     <title>MyGains Journal</title>
 </head>
 <body>
-
+<a class="btn btn-danger navbar-btn" href="login.html">Logout</a>
+<div class="container" id="entry-container">
+    <div id="journal-form-container">
+        <form id="journal-form">
+            <label for="journal-form">New Journal Entry</label>
+            <div class="exercise-type">
+                <select name="exercise-category" class="resist-endurance">
+                    <option value="resistance">Resistance Training</option>
+                    <option value="endurance">Endurance Training</option>
+                </select>
+            </div>
+            <div class="exercise-name">
+                <p>Exercise Name</p>
+                <textarea class="text-inputs" id="ex-name" placeholder="Add exercise name.."></textarea>
+            </div>
+            <div class="weight-amt">
+                <p>Weight (lbs)</p>
+                <textarea class="text-inputs" id="weight-mass" placeholder="Add weight amount..."></textarea>
+            </div>
+            <div class="end-distance">
+                <p>Distance (mi)</p>
+                <textarea class="text-inputs" id="end-dist" placeholder="Add distance..."></textarea>
+            </div>
+            <div class="end-time">
+                <p>Duration (min)</p>
+                <textarea class="text-inputs" id="end-dur" placeholder="Add time..."></textarea>
+            </div>
+            <div class="weight-set-amount">
+                <p>Number of Sets</p>
+                <input type="radio" id="set-count-1" name="set-count" value="1">
+                <label for="set-count-1">1</label>
+                <input type="radio" id="set-count-2" name="set-count" value="2">
+                <label for="set-count-2">2</label>
+                <input type="radio" id="set-count-3" name="set-count" value="3">
+                <label for="set-count-3">3</label>
+                <input type="radio" id="set-count-4" name="set-count" value="4">
+                <label for="set-count-4">4</label>
+                <input type="radio" id="set-count-5" name="set-count" value="5">
+                <label for="set-count-5">5</label>
+            </div>
+            <div class="weight-rep-counter">
+                <div class="rep-counter" id="rep-counter-1">
+                    <p>Set 1</p>
+                    <select name="set-1" class="rep-counter-select">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                    </select>
+                </div>
+                <div class="rep-counter" id="rep-counter-2">
+                    <p>Set 2</p>
+                    <select name="set-2" class="rep-counter-select">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                    </select>
+                </div>
+                <div class="rep-counter" id="rep-counter-3">
+                    <p>Set 3</p>
+                    <select name="set-3" class="rep-counter-select">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                    </select>
+                </div>
+                <div class="rep-counter" id="rep-counter-4">
+                    <p>Set 4</p>
+                    <select name="set-4" class="rep-counter-select">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                    </select>
+                </div>
+                <div class="rep-counter" id="rep-counter-5">
+                    <p>Set 5</p>
+                    <select name="set-5" class="rep-counter-select">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="./javascript/home.js" type="application/javascript"></script>
 </body>
 </html>
