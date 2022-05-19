@@ -13,28 +13,33 @@
 <div class="container" id="entry-container">
     <div id="journal-form-container">
         <form id="journal-form">
-            <label for="journal-form">New Journal Entry</label>
+            <label id="entry-header" for="journal-form">New Journal Entry</label>
+            <div id="current-date">
+                <input id="entry-date" type="date">
+            </div>
             <div class="exercise-type">
+                <p>Exercise Type</p>
                 <select name="exercise-category" class="resist-endurance">
+                    <option value="default"> </option>
                     <option value="resistance">Resistance Training</option>
                     <option value="endurance">Endurance Training</option>
                 </select>
             </div>
             <div class="exercise-name">
                 <p>Exercise Name</p>
-                <textarea class="text-inputs" id="ex-name" placeholder="Add exercise name.."></textarea>
+                <input type="text">
             </div>
-            <div class="weight-amt">
+            <div class="weight-amt" >
                 <p>Weight (lbs)</p>
-                <textarea class="text-inputs" id="weight-mass" placeholder="Add weight amount..."></textarea>
+                <input type="text">
             </div>
             <div class="end-distance">
                 <p>Distance (mi)</p>
-                <textarea class="text-inputs" id="end-dist" placeholder="Add distance..."></textarea>
+                <input type="text">
             </div>
             <div class="end-time">
                 <p>Duration (min)</p>
-                <textarea class="text-inputs" id="end-dur" placeholder="Add time..."></textarea>
+                <input type="text">
             </div>
             <div class="weight-set-amount">
                 <p>Number of Sets</p>
