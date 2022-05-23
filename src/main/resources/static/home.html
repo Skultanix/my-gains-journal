@@ -9,7 +9,7 @@
     <title>MyGains Journal</title>
 </head>
 <body>
-<a class="btn btn-danger navbar-btn" href="login.html">Logout</a>
+<a class="btn btn-danger navbar-btn" href="login.html" onclick="handleLogout()">Logout</a>
 <div class="container" id="entry-container">
     <div id="journal-form-container">
         <form id="journal-form">
@@ -25,34 +25,31 @@
                     <option value="endurance">Endurance Training</option>
                 </select>
             </div>
-            <div class="exercise-name">
+            <div class="exercise-name-div">
                 <p>Exercise Name</p>
-                <input type="text">
+                <input type="text" id="exercise-name">
             </div>
             <div class="weight-amt" >
                 <p>Weight (lbs)</p>
-                <input type="text">
+                <input type="text" id="resist-weight-amt">
             </div>
-            <div class="end-distance">
+            <div class="end-distance-div">
                 <p>Distance (mi)</p>
-                <input type="text">
+                <input type="text" id="end-distance">
             </div>
             <div class="end-time">
                 <p>Duration (min)</p>
-                <input type="text">
+                <input type="text" id="end-duration">
             </div>
             <div class="weight-set-amount">
                 <p>Number of Sets</p>
-                <input type="radio" id="set-count-1" name="set-count" value="1">
-                <label for="set-count-1">1</label>
-                <input type="radio" id="set-count-2" name="set-count" value="2">
-                <label for="set-count-2">2</label>
-                <input type="radio" id="set-count-3" name="set-count" value="3">
-                <label for="set-count-3">3</label>
-                <input type="radio" id="set-count-4" name="set-count" value="4">
-                <label for="set-count-4">4</label>
-                <input type="radio" id="set-count-5" name="set-count" value="5">
-                <label for="set-count-5">5</label>
+                <select name="set-counter" class="rep-counter-select" id="set-counter-select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
             </div>
             <div class="weight-rep-counter">
                 <div class="rep-counter" id="rep-counter-1">
@@ -236,6 +233,9 @@
                     </select>
                 </div>
             </div>
+            <div class="submit-button-div">
+                <button id="submit-button" type="submit" class="btn btn-primary">Submit</button>
+            </div>
         </form>
     </div>
 </div>
@@ -248,12 +248,12 @@
                 <button type="button" class="button-close" data-bs-backdrop="modal" >Close</button>
             </div>
             <div class="modal-body d-flex">
-                <div id="-modal-current-date">
+                <div id="modal-current-date">
                     <input id="modal-entry-date" type="date">
                 </div>
                 <div class="exercise-type">
                     <p>Exercise Type</p>
-                    <select name="exercise-category" class="resist-endurance">
+                    <select name="exercise-category" class="resist-endurance" id="modal-exercise-type">
                         <option value="default"> </option>
                         <option value="resistance">Resistance Training</option>
                         <option value="endurance">Endurance Training</option>
@@ -261,37 +261,34 @@
                 </div>
                 <div class="exercise-name">
                     <p>Exercise Name</p>
-                    <input type="text">
+                    <input type="text" id="modal-exercise-name">
                 </div>
                 <div class="weight-amt" >
                     <p>Weight (lbs)</p>
-                    <input type="text">
+                    <input type="text" id="modal-weight-amt">
                 </div>
                 <div class="end-distance">
                     <p>Distance (mi)</p>
-                    <input type="text">
+                    <input type="text" id="modal-end-distance">
                 </div>
                 <div class="end-time">
                     <p>Duration (min)</p>
-                    <input type="text">
+                    <input type="text" id="modal-end-time">
                 </div>
                 <div class="weight-set-amount">
                     <p>Number of Sets</p>
-                    <input type="radio" id="modal-set-count-1" name="set-count" value="1">
-                    <label for="set-count-1">1</label>
-                    <input type="radio" id="modal-set-count-2" name="set-count" value="2">
-                    <label for="set-count-2">2</label>
-                    <input type="radio" id="modal-set-count-3" name="set-count" value="3">
-                    <label for="set-count-3">3</label>
-                    <input type="radio" id="modal-set-count-4" name="set-count" value="4">
-                    <label for="set-count-4">4</label>
-                    <input type="radio" id="modal-set-count-5" name="set-count" value="5">
-                    <label for="set-count-5">5</label>
+                        <select name="modal-set-counter" class="rep-counter-select" id="modal-set-counter-select">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
                 </div>
                 <div class="weight-rep-counter">
                     <div class="rep-counter" id="modal-rep-counter-1">
                         <p>Set 1</p>
-                        <select name="set-1" class="rep-counter-select">
+                        <select name="set-1" class="rep-counter-select" id="modal-rep-counter-select-1">
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -327,7 +324,7 @@
                     </div>
                     <div class="rep-counter" id="modal-rep-counter-2">
                         <p>Set 2</p>
-                        <select name="set-2" class="rep-counter-select">
+                        <select name="set-2" class="rep-counter-select" id="modal-rep-counter-select-2">
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -363,7 +360,7 @@
                     </div>
                     <div class="rep-counter" id="modal-rep-counter-3">
                         <p>Set 3</p>
-                        <select name="set-3" class="rep-counter-select">
+                        <select name="set-3" class="rep-counter-select" id="modal-rep-counter-select-3">
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -399,7 +396,7 @@
                     </div>
                     <div class="rep-counter" id="modal-rep-counter-4">
                         <p>Set 4</p>
-                        <select name="set-4" class="rep-counter-select">
+                        <select name="set-4" class="rep-counter-select" id="modal-rep-counter-select-4">
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -435,7 +432,7 @@
                     </div>
                     <div class="rep-counter" id="modal-rep-counter-5">
                         <p>Set 5</p>
-                        <select name="set-5" class="rep-counter-select">
+                        <select name="set-5" class="rep-counter-select" id="modal-rep-counter-select-5">
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
