@@ -4,9 +4,9 @@ const userId = cookieArr[1]
 
 //Base Journal Entry Elements
 const submitForm = document.getElementById("journal-form");
-const entryContainer = document.getElementById("journal-form-container");
+const entryContainer = document.getElementById("journal-container");
 const entryDate = document.getElementById("entry-date");
-const entryExerciseType = document.getElementById("resist-endurance");
+const entryExerciseType = document.getElementById("exercise-type");
 const entryExerciseName = document.getElementById("exercise-name");
 const entryWeightAmount = document.getElementById("resist-weight-amt");
 const entryDistance = document.getElementById("end-distance");
@@ -39,7 +39,7 @@ const headers = {
     'Content-Type': 'application/json'
 }
 
-const baseUrl = "http://localhost:8080/api/v1/journal"
+const baseUrl = "http://localhost:8080/api/v1/journal/"
 
 ///Functions
 
@@ -92,11 +92,12 @@ async function addEntry(obj) {
 }
 
 async function getEntries(userId) {
-    await fetch(`${baseUrl}user/${userId}`, {
+    await fetch(`http://localhost:8080/api/v1/journal/user/${userId}`, {
         method: "GET",
         headers: headers
     })
         .then(response => response.json())
+        // .then(data => console.log(data))
         .then(data => createEntryCards(data))
         .catch(err => console.error(err))
 }
@@ -148,13 +149,13 @@ async function handleDelete(entryId) {
 }
 
 const createEntryCards = (array) => {
-    entryContainer.innerHTML = ''
+    // entryContainer.innerHTML = ''
     array.forEach(obj => {
         let entryCard = document.createElement("div")
         entryCard.classList.add("m-2")
         entryCard.innerHTML = `
         <div class="card d-flex" style="width: 18rem; height: 18rem;">
-            <div class="card-body d-flex flex-column justify-content-between" style="height: available">
+            <div class="card-body d-flex flex-column justify-content-between" style="height: max-content">
                 <p class="card-text">${obj.exerciseType}</p>
                 <p class="card-text">${obj.exerciseName}</p>
                 <p class="card-text">${obj.weight}</p>
@@ -208,6 +209,16 @@ const populateModal = (obj) =>{
 getEntries(userId);
 
 submitForm.addEventListener("submit", handleSubmit)
+
+//Form Data Testing
+submitForm.addEventListener("submit", dataTest)
+function dataTest() {
+    console.log(entryExerciseType.value)
+    console.log(entryExerciseName.value)
+    console.log(entryWeightAmount.value)
+    console.log(entrySetCounter.value)
+    console.log(entrySetValueOne.value)
+}
 
 updateEntryButton.addEventListener("click", (e) =>{
     let entryId = e.target.getAttribute("data-entry-id")

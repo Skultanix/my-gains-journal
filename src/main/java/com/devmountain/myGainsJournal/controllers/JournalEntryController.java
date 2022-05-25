@@ -10,15 +10,16 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/journal")
+//@RequestMapping("/api/v1/")
 public class JournalEntryController {
     @Autowired
     private JournalEntryService journalEntryService;
 
     @GetMapping("/user/{userId}")
     public List<JournalEntryDto> getJournalEntriesByUser(@PathVariable Long userId) {
+        System.out.println(journalEntryService.getAllEntriesByUserId(userId));
         return journalEntryService.getAllEntriesByUserId(userId);
     }
-
     @PostMapping("/user/{userId}")
     public void addEntry(@RequestBody JournalEntryDto journalEntryDto, @PathVariable Long userId) {
         journalEntryService.addEntry(journalEntryDto, userId);

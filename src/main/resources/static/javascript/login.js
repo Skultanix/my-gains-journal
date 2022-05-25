@@ -27,8 +27,10 @@ const handleSubmit = async (e) => {
     const responseArr = await response.json();
 
     if( response.status === 200) {
-        window.location.replace(responseArr[0])
-    };
+        document.cookie = `userId=${responseArr[1]}`;
+        window.location.replace(responseArr[0]);
+        // window.location.href(responseArr[0]);
+    }
 }
 
 loginForm.addEventListener("submit", handleSubmit);

@@ -60,6 +60,9 @@ public class JournalEntryServiceImpl implements JournalEntryService {
         Optional<User> userOptional = userRepository.findById(userId);
         if (userOptional.isPresent()) {
             List<JournalEntry> journalEntryList = journalEntryRepository.findAllByUserEquals(userOptional.get());
+
+//            System.out.println(journalEntryList);
+
             return journalEntryList.stream().map(journalEntry -> new JournalEntryDto(journalEntry)).collect(Collectors.toList());
         }
         return Collections.emptyList();

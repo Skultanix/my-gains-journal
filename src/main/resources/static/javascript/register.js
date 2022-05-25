@@ -1,6 +1,6 @@
 const registerForm = document.getElementById("register-form");
-const registerUsername = document.getElementById("register-username");
-const registerPassword = document.getElementById("register-password");
+// const registerUsername = document.getElementById("register-username");
+// const registerPassword = document.getElementById("register-password");
 
 const headers = {
     'Content-Type' : 'application/json'
@@ -12,11 +12,13 @@ const handleSubmit = async (e) => {
     e.preventDefault()
 
     let bodyObj = {
-        username: registerUsername.value,
-        password: registerPassword.value
+        username: document.getElementById("register-username").value,
+        password: document.getElementById("register-password").value
     };
 
-    const response = await fetch(`${baseUrl}/register`, {
+    console.log(bodyObj)
+
+    const response = await fetch(`http://localhost:8080/api/v1/users/register`, {
         method: "POST",
         body: JSON.stringify(bodyObj),
         headers: headers
