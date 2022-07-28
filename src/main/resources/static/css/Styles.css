@@ -1,0 +1,348 @@
+body {
+    background-color: #1e1e1e;
+    /*background-image: url("./images/pexels-leon-ardho-1552242.jpg");*/
+    /*background-size: 100%;*/
+}
+.container {
+    vertical-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    width: 750px;
+    padding: 20px;
+    border: 10px solid #2f2f2f;
+    border-radius: 15px;
+    background-color: #363636;
+    opacity: 90%;
+
+}
+
+#home-container {
+    margin-top: 50px;
+    width: 680px;
+    padding-left: 100px;
+}
+
+#site-title {
+    color: aliceblue;
+    text-align: center;
+    font-size: 42pt;
+    font-family: 'Orbitron', sans-serif;
+    border-bottom: 5px solid aliceblue;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 46pt;
+    color: #129cff;
+    text-align: center;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+#login-form {
+    background-color: #424242;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+#register-form {
+    background-color: #424242;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+p {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-size: 15pt;
+    color: #5585ab;
+    margin-bottom: 10px;
+}
+
+#login-username {
+    font-size: 20pt;
+    width: 76%;
+    outline: none;
+    border: solid 5px #2f2f2f;
+}
+
+#register-username {
+    font-size: 20pt;
+    width: 76%;
+    outline: none;
+    border: solid 5px #2f2f2f;
+}
+
+input[type=text] {
+    border-radius: 10px;
+    background-color: #3d3d3d;
+    font-size: 15pt;
+    color: #129cff;
+    margin-bottom: 20px;
+    width: 35%;
+    outline: none;
+    border: solid 5px #2f2f2f;
+}
+
+input[type=text]::placeholder {
+    color: #ffffff;
+    background-color: #7e7e7e;
+}
+
+input[type=password] {
+    border-radius: 10px;
+    background-color: #3d3d3d;
+    font-size: 20pt;
+    color: #129cff;
+    margin-bottom: 20px;
+    width: 76%;
+    outline: none;
+    border: solid 5px #2f2f2f;
+}
+
+input[type=password]::placeholder {
+    color: #ffffff;
+    background-color: #7e7e7e;
+}
+
+.submission {
+    text-align: center;
+}
+
+.submit-button-div {
+    text-align: center;
+    width: 580px;
+    padding-right: 200px;
+}
+
+#submit-button {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20pt;
+    background-color: #5c5c5c;
+    border: 5px solid #2f2f2f;
+    color: #1a1a1a;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 25px;
+}
+
+#submit-button:hover {
+    background-color: #2f2f2f;
+    border: 5px solid #5585ab;
+    color: #129cff;
+}
+
+.btn-secondary {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20pt;
+    background-color: #5c5c5c;
+    border: 5px solid #2f2f2f;
+    color: #1a1a1a;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 25px;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background-color: #2f2f2f;
+    border: 5px solid #55ab77;
+    color: #12ff81;
+}
+
+select {
+    border-radius: 10px;
+    background-color: #3d3d3d;
+    font-size: 15pt;
+    color: #129cff;
+    margin-bottom: 20px;
+    width: auto;
+    outline: none;
+    border: solid 5px #2f2f2f;
+}
+
+input[type=date] {
+    border-radius: 10px;
+    background-color: #3d3d3d;
+    font-size: 15pt;
+    color: #129cff;
+    margin-bottom: 20px;
+    width: auto;
+    outline: none;
+    border: solid 5px #2f2f2f;
+}
+
+#current-date {
+    display: block;
+    text-align: right;
+}
+
+#home-header-section {
+    margin-top: 0px;
+    width: 820px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: center;
+    text-align: right;
+}
+
+.btn-danger {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20pt;
+    background-color: #5c5c5c;
+    border: 5px solid #2f2f2f;
+    color: #1a1a1a;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+.btn-danger:hover {
+    background-color: #2f2f2f;
+    border: 5px solid #c06600;
+    color: #ff4f12;
+}
+
+.weight-rep-counter {
+    display: flex;
+
+}
+
+.rep-counter {
+    margin-right: 50px;
+}
+
+
+
+/*Modal Styling*/
+
+#entry-edit-modal-title {
+    margin-top: 0px;
+}
+
+#entry-edit-modal {
+    vertical-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 20px;
+    border: 10px solid #2f2f2f;
+    border-radius: 15px;
+    background-color: #363636;
+    width: 680px;
+    padding-left: 100px;
+}
+
+#update-entry-button {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20pt;
+    background-color: #5c5c5c;
+    border: 5px solid #2f2f2f;
+    color: #1a1a1a;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+#update-entry-button:hover {
+    background-color: #2f2f2f;
+    border: 5px solid #55ab77;
+    color: #12ff81;
+}
+
+#modal-footer {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 580px;
+    padding-right: 200px;
+}
+
+#close-modal {
+    display: block;
+    text-align: right;
+    margin-bottom: 0px;
+}
+
+#modal-current-date {
+    display: block;
+    text-align: right;
+}
+
+#modal-weight-rep-counter-div {
+    display: flex;
+}
+/*Card Styling*/
+
+.btn-primary {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20pt;
+    background-color: #5c5c5c;
+    border: 5px solid #2f2f2f;
+    color: #1a1a1a;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 25px;
+    text-decoration: none;
+    margin-right: 100px;
+}
+
+.btn-primary:hover {
+    background-color: #2f2f2f;
+    border: 5px solid #55ab77;
+    color: #12ff81;
+}
+
+.card {
+    margin: 25px;
+    width: 425px;
+    height: auto;
+    background-color: #4f4f4f;
+    border-radius: 15px;
+    border: solid 10px #3d3d3d;
+    flex: none;
+    padding-left: 85px;
+}
+
+.card-footer {
+    display: block;
+    text-align: center;
+}
+
+.card-text {
+    color: #129cff;
+}
+
+.card-header {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18pt;
+    color: #129cff;
+    margin-right: 75px;
+    text-decoration: none;
+}
+#journal-collection {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
